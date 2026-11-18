@@ -32,11 +32,7 @@ pipeline {
                             npm test
                         '''
                     }
-                    post {
-                        always {
-                            junit 'jest-results/junit.xml'   // or 'junit.xml' if you skip the package.json setting
-                        }
-                    }
+                   
                 }
 
                 stage('E2E') {
